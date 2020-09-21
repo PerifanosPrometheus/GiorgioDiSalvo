@@ -1,0 +1,20 @@
+Title of the paper: Inference for Multiple Heterogeneous Networks with a Common Invariant Subspace
+
+This paper introduces multiple adjacency spectral embedding(MASE) and the new model "common subspace independent-edge"(COSIE) upon which this technique relies upon. 
+
+The problem that this model tries to solve is the modeling of the structure of multi-graph data(whether layered or time-series). Substantially, the main goal is to create a simple
+, flexible model for multiple metworks capable of utilizing information about their common structure while maintaining information about the differences between each graph.
+
+The subsequent idea is to utilize the estimated parameters of this model to perform joint inferance, clustering etc.
+
+The Model proposed is the COSIE, and the estimation of its parameters corresponds to MASE. 
+
+As anticipated, the model proposed(COSIE) is a semiparametric model for multiple graphs based on a common subspace structure between adjacency matrices, which allows for 
+heterogenity within and across graphs. Essentially, given M graphs G1, G2, ... , GM with M adjacency matrices A1,A2, ... , AM each Adjacency matrix A(i) = V * R(i) * transpose(V). 
+The COSIE models assumes that the left invariant Subspace V thus found is invariant accross multiple graphs. Therefore, the goal of the MASE is to estimate both the subspace V and
+each subspace R(i) for each graph. This is done by applying ASE to each A(i) obtain X(i) for all m's. Then each of these X(i) is decomposed in two matrices Vhat and Dhat. The Vhat
+are then utilized to estimate V while each R(i) is obtained by inversion of the formula A(i) = V * R(i) * transpose(V). Indeed, since V is orthogonal, R(i) = transpose(V) * R(i)
+* V.
+
+The remaining part of the paper essentially more technically describe the properties of this new model and its theretical performance. Finally, the model is deployed and utilized 
+on real brain imaging data, in which confirmation of the theoretical results is presented
