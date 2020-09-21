@@ -1,0 +1,24 @@
+The significane of this paper in relation to the development of a tutorial that shows the difference between OMNI versus MASE is not so much in the actual methodology
+implied and proposed for anomaly detection using joint inferance, but rather in the demonstration via simulations of differences in performance in the two embedding methodologies. 
+
+Indeed, understanding the reason why MASE outperforms OMNI in certain simulations and viceversa is important in the development of the intended tutorial and this paper highlights 
+very clearly what may cause this difference in performance. 
+
+Leaving out the majority of the details regarding the actual methodology proposed, the paper essentially demonstrates that MASE can be more powerful in anomaly detection of time 
+series graphs in which the community structure remains fairly similar or identical accros time. Instead, in the case in which much greater variability between structure and 
+communities is present, OMNI appears to perform better in anomaly detection.
+
+This is explained by the COSIE Assumption whihc underlies MASE. In fact any latent position matrix X can be decomposed as X(t) = V(t) * S(t)(by QR decomposition for example). 
+The left invariant subspace V can be thought of as the underlying community structure of the graph upon which S can then cause variations on the given V structure. 
+
+There may be three main cases of variations over time of the latent position matrix:
+
+1) V is fairly constant: X(t) = V * S(t). In such case MASE performs better due to the fact that the COSIE assumption presupposes similar structure between each graph.
+
+2) V varies only at specific time interval. Therefore, X(t) = V(t) * S(t) for some t = 1,2, ... p while for the remaining times it is just like 1. In this case, inferences based 
+upon MASE lose some of their power due to the violation of COSIE assumption.
+
+3) V varies continously over time. Therefore, X(t) = V(t) * S(t) at every time point. In this case, OMNI will perform better as it doesn't make any assumption of the structure of 
+graphs and therefore it is better suited for embedding of unstructured graphs. Which is also why it outperforms MASE in community detection tasks
+
+The simulations performed, essentially confirm these ideas
