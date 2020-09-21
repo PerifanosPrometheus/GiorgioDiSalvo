@@ -22,3 +22,7 @@ represent the latent positions associated with the first graph, the rows in betw
 
 The simulation, hyphothesis testing then confirm that omnibus embedding is apt for embedding of a wide class of latent position random graphs, this embedding generates 
 accurate estimates of latent positions and supplies empirical power for distinguishing when graphs are statistically different.
+
+The big takeaway, is that although optimally performing for multiple graphs drawn from the same distribution, it also performs comparatevely well whenever the structure and 
+distribution of graphs is quite variegated. This may explain why it seems to perform better than MASE in community detection and anomaly detection across graphs with varying
+V subspace.
