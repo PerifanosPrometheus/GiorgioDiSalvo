@@ -8,7 +8,7 @@ Leaving out the majority of the details regarding the actual methodology propose
 series graphs in which the community structure remains fairly similar or identical accros time. Instead, in the case in which much greater variability between structure and 
 communities is present, OMNI appears to perform better in anomaly detection.
 
-This is explained by the COSIE Assumption whihc underlies MASE. In fact any latent position matrix X can be decomposed as X(t) = V(t) * S(t)(by QR decomposition for example). 
+This is explained by the COSIE Assumption which underlies MASE. In fact any latent position matrix X can be decomposed as X(t) = V(t) * S(t)(by QR decomposition for example). 
 The left invariant subspace V can be thought of as the underlying community structure of the graph upon which S can then cause variations on the given V structure. 
 
 There may be three main cases of variations over time of the latent position matrix:
@@ -19,6 +19,6 @@ There may be three main cases of variations over time of the latent position mat
 upon MASE lose some of their power due to the violation of COSIE assumption.
 
 3) V varies continously over time. Therefore, X(t) = V(t) * S(t) at every time point. In this case, OMNI will perform better as it doesn't make any assumption of the structure of 
-graphs and therefore it is better suited for embedding of unstructured graphs. Which is also why it outperforms MASE in community detection tasks
+graphs and therefore it is better suited for embedding of graphs with different structures. Which is also why it outperforms MASE in community detection tasks
 
 The simulations performed, essentially confirm these ideas
