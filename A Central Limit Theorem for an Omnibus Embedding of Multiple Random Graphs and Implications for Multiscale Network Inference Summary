@@ -1,0 +1,24 @@
+Title: A Central Limit Theorem for an Omnibus Embedding of Multiple Random Graphs and Implications for Multiscale Network Inference
+
+This paper addresses the problem of joint inferances, clustering etc. on multiple random graph data. 
+
+The main idea is to try to correctly estimate graph parameters of multiple graphs accurately both in the case in which those parameters are equal across graphs and in the case
+in which they are different. 
+
+The proposed methodology is the omnibus embedding, also known as OMNI. Essentially, the idea is to simultaneously embed into the same single space the adjacency matrices of
+multiple graphs obtaining a distinct representation of each graph and each vertex of each graph.
+
+This is achieved by proposing the creation of an Omnibus matrix O(dimensions are mn x mn where m is the number of graphs and nxn is the dimension of each adjacency matrix)such that:
+
+      [A1 1/2(A1 + A2) ... 1/2(A1+AN)]
+ O =  [1/2(A2 + A1) A2 ... 1/2(A2+AN)]
+                     .
+                     .
+                     .
+      [1/2(AN + A1)    ...         AN]
+
+Subsequently, the d-dimensional omnibus embedding of A1, ... , AM is the adjacency spectral embedding Z = ASE(O, d). Z has dimensions mn x d where the top n rows 
+represent the latent positions associated with the first graph, the rows in between n and 2n represent the second graph and so on.
+
+The simulation, hyphothesis testing then confirm that omnibus embedding is apt for embedding of a wide class of latent position random graphs, this embedding generates 
+accurate estimates of latent positions and supplies empirical power for distinguishing when graphs are statistically different.
